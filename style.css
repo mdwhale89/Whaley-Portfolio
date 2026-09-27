@@ -1,0 +1,287 @@
+/* CSS by Mel Whaley */
+
+/* ==========================================================================
+   Space-Themed Color Palette & Variables
+   ========================================================================== */
+:root {
+  /* Surface & UI Accents */
+  --primary-color: #7B5CFA;        /* Deep Nebula Violet - buttons, active borders, focal accents */
+  --secondary-color: #12183A;      /* Midnight Surface - cards, navigation panels, elevated surfaces */
+  --secondary-border: #2E3875;     /* Subtle container outline to separate cards from the void */
+
+  /* Celestial Typography */
+  --text-color: #F6D365;           /* Warm Celestial Gold - primary body copy */
+  --text-heading: #FFE8A3;         /* Bright Starlight Gold - crisp headers */
+  --text-muted: #B3B9D6;           /* Soft Stardust Silver - subtitles, meta tags, and captions */
+
+  /* Cosmic Interactive States */
+  --link-color: #00F0FF;           /* Pulsar Cyan - high-contrast, luminous link text */
+  --link-hover-color: #FF5E8E;     /* Supernova Pink - energetic hover state */
+
+  /* Nebula Gradient Settings */
+  --nebula-tint: #1E2A78;          /* Deep royal blue accent from component controls */
+  --nebula-void: #010208;          /* Almost pure black void base */
+  --nebula-speed: 80s;             /* Animation loop duration */
+  --nebula-blur: 100px;            /* Vapor density */
+}
+
+/* ==========================================================================
+   Base Layout & Document Setup
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: var(--nebula-void);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+}
+
+/* ==========================================================================
+   Obsidian Nebula Animated Background
+   ========================================================================== */
+.nebula-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: var(--nebula-void);
+}
+
+/* Swirling color mesh */
+.nebula-mesh {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  filter: blur(var(--nebula-blur));
+  background: 
+    radial-gradient(circle at 25% 25%, var(--nebula-tint) 0%, transparent 45%),
+    radial-gradient(circle at 75% 75%, #120458 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, #080B24 0%, var(--nebula-void) 70%),
+    radial-gradient(circle at 40% 80%, #1A0B2E 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, #050A30 0%, transparent 40%);
+  background-size: 100% 100%;
+  animation: rotateNebula var(--nebula-speed) linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotateNebula {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Multi-layered CSS Starfield */
+.stars-layer-1,
+.stars-layer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: white;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Layer 1: Fine distant stars */
+.stars-layer-1 {
+  width: 1px;
+  height: 1px;
+  box-shadow: 
+    5vw 12vh white, 14vw 48vh white, 22vw 85vh white, 31vw 24vh white,
+    42vw 63vh white, 53vw 15vh white, 64vw 78vh white, 75vw 35vh white,
+    83vw 90vh white, 92vw 18vh white, 18vw 92vh white, 37vw 5vh white,
+    60vw 52vh white, 88vw 60vh white, 48vw 38vh white, 70vw 95vh white;
+  animation: starTwinkle 3s ease-in-out infinite;
+}
+
+/* Layer 2: Brighter foreground stars with glow */
+.stars-layer-2 {
+  width: 2px;
+  height: 2px;
+  box-shadow: 
+    9vw 30vh 0 0 white, 27vw 70vh 0 0 white, 45vw 20vh 0 0 white,
+    67vw 82vh 0 0 white, 85vw 28vh 0 0 white, 15vw 75vh 0 0 white,
+    55vw 60vh 0 0 white, 78vw 12vh 0 0 white, 95vw 88vh 0 0 white;
+  animation: starTwinkle 4.5s ease-in-out infinite reverse;
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* ==========================================================================
+   Typography & Structure
+   ========================================================================== */
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading);
+  text-shadow: 0 0 12px rgba(246, 211, 101, 0.25);
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.65;
+  color: var(--text-color);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Navigation Bar
+   ========================================================================== */
+nav {
+  margin: 1.5rem 0 2.5rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0.75rem 1.25rem;
+  margin: 0;
+  gap: 1.75rem;
+  background: rgba(18, 24, 58, 0.55);
+  border: 1px solid var(--secondary-border);
+  border-radius: 9999px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  width: fit-content;
+}
+
+nav a {
+  text-transform: capitalize;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   Anchor Links & Buttons
+   ========================================================================== */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-shadow: 0 0 8px rgba(255, 94, 142, 0.4);
+}
+
+.button-primary {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-primary:hover {
+  background-color: #9275FF;
+  box-shadow: 0 0 16px rgba(123, 92, 250, 0.5);
+  transform: translateY(-1px);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   Cards / Content Sections
+   ========================================================================== */
+.space-card {
+  background: rgba(18, 24, 58, 0.7);
+  border: 1px solid var(--secondary-border);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   Contact Form Styles
+   ========================================================================== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: var(--text-heading);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(1, 2, 8, 0.6);
+  border: 1px solid var(--secondary-border);
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--link-color);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.25);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(179, 185, 214, 0.5);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
