@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Animation &amp; Motion Design - TookStarz Designs</title>
+    <!-- Link external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Responsive 16:9 Video Container for YouTube Embeds */
+        .video-embed-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid var(--secondary-border);
+            box-shadow: 0 0 24px rgba(123, 92, 250, 0.3), 0 8px 32px rgba(0, 0, 0, 0.7);
+            margin: 1.75rem 0;
+            background: #000000;
+        }
+
+        .video-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Direct link fallback */
+        .video-fallback-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Video element adjustments inside gallery slides */
+        .slide video {
+            width: 100%;
+            max-height: 440px;
+            border-radius: 8px;
+            background: #000000;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <!-- Nebula background layers -->
+    <div class="nebula-container">
+        <div class="nebula-mesh"></div>
+        <div class="stars-layer-1"></div>
+        <div class="stars-layer-2"></div>
+
+        <!-- Foreground content -->
+        <div class="content-wrapper">
+            <!-- Navigation -->
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="digital-to-film.html">DTF Fabrication</a></li>
+                    <li><a href="animation.html">Animation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <header>
+                <h1>Animation &amp; Motion Design</h1>
+                <p>Technical precision, kinematic layering, and rhythmic visual storytelling.</p>
+            </header>
+
+            <main>
+                <!-- Animation Overview Statement -->
+                <section class="space-card">
+                    <h2>Motion Systems &amp; Visual Timing</h2>
+                    <p class="text-muted">The Discipline of Motion</p>
+                    <p>
+                        Animation is the intersection of technical precision and visual storytelling. 
+                        I specialize in a multi-disciplinary production pipeline—moving from original asset 
+                        creation and custom brush engineering into complex motion timing and rhythmic editing. 
+                        My goal is to transform static concepts into immersive digital experiences through 
+                        methodical layering and fluid motion.
+                    </p>
+                </section>
+
+                <!-- Assignment 1: Rotoscoping & Character Asset Creation -->
+                <section class="space-card">
+                    <h3>Assignment 1: Rotoscoping &amp; Character Asset Creation</h3>
+                    <p class="text-muted">Kinematic ASL Translation &amp; Frame-by-Frame Vectorization</p>
+                    
+                    <p>
+                        The objective of this production was to translate the expressive, kinetic movement 
+                        of American Sign Language (ASL) into a vectorized character asset. Utilizing the 
+                        rotoscoping technique, I meticulously traced my full self-introduction video in Photoshop, 
+                        frame-by-frame.
+                    </p>
+
+                    <p>
+                        This rigorous process required isolating key elements—including the precise geometry of 
+                        hand signs and facial expressions—into independent layers. By managing these nested layers 
+                        and focusing on the kinematic flow of communication, I was able to engineer a complex 
+                        performance trace that maintains the clarity and intent of the original ASL message while 
+                        achieving a bespoke, hand-drawn aesthetic.
+                    </p>
+                </section>
+
+                <!-- What is Rotoscoping? Educational Card -->
+                <section class="space-card">
+                    <h3>What is Rotoscoping?</h3>
+                    <p class="text-muted">Traditional Craft in Modern Digital Pipelines</p>
+                    <p>
+                        Rotoscoping is a traditional animation technique where a creator traces over live-action 
+                        film footage, frame-by-frame, to produce realistic action. By using an original video as a 
+                        reference, an animator can capture the subtle geometry of motion—such as the complex hand 
+                        shapes used in American Sign Language—that would be difficult to recreate from scratch.
+                    </p>
+
+                    <!-- Responsive YouTube Embed for Assignment 1 -->
+                    <div class="video-embed-container">
+                        <iframe 
+                            src="https://www.youtube-nocookie.com/embed/1CLc27uaazA" 
+                            title="ASL Rotoscoping Self-Introduction Animation" 
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <a href="https://youtu.be/1CLc27uaazA" target="_blank" rel="noopener noreferrer" class="video-fallback-link">
+                        <span>✦ Watch on YouTube: ASL Rotoscoping Self-Introduction</span>
+                    </a>
+                </section>
+
+                <!-- Assignment 2: Narrative Synthesis & Soundscape Design -->
+                <section class="space-card">
+                    <h3>Assignment 2: Narrative Synthesis &amp; Soundscape Design</h3>
+                    <p class="text-muted">Live-Action Staging, Asset Harmonization &amp; Comedic Timing</p>
+
+                    <p>
+                        For the production of Judith Viorst’s "Mother Doesn’t Want a Dog," my goal was to create 
+                        a unified cinematic world by blending personal performance with curated digital assets. 
+                        This project required a dual-focus strategy: managing the unpredictable humor of live 
+                        subjects—my mother and my dog, Joker—and conducting a rigorous search for external footage 
+                        that could seamlessly expand the story.
+                    </p>
+
+                    <!-- CSS Slide Gallery for Production Video Clips -->
+                    <div class="gallery-container">
+                        <div class="slider" tabindex="0" aria-label="Mother Doesn't Want a Dog production footage and voice recording clips">
+                            <!-- Slide 1: Joker Not Sitting -->
+                            <div class="slide" id="anim-slide-1">
+                                <a href="#anim-slide-5" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <video controls preload="metadata">
+                                    <source src="videos/joker%20not%20sitting.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <p class="slide-caption">Live-Action Staging: The 'Silent Command' technique capturing Joker's inquisitive reaction.</p>
+                                <a href="#anim-slide-2" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 2: Joker Snoring -->
+                            <div class="slide" id="anim-slide-2">
+                                <a href="#anim-slide-1" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <video controls preload="metadata">
+                                    <source src="videos/joker%20snoring.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <p class="slide-caption">Narrative Beat: Joker fast asleep on the bed, paired with nighttime poem verses.</p>
+                                <a href="#anim-slide-3" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 3: Driving Home In Snow -->
+                            <div class="slide" id="anim-slide-3">
+                                <a href="#anim-slide-2" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <video controls preload="metadata">
+                                    <source src="videos/Driving%20Home%20In%20Snow.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <p class="slide-caption">Asset Curation: First-person winter driving footage matching the poem's icy night theme.</p>
+                                <a href="#anim-slide-4" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 4: Walking Dogs in Snow -->
+                            <div class="slide" id="anim-slide-4">
+                                <a href="#anim-slide-3" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <video controls preload="metadata">
+                                    <source src="videos/Walking%20Dogs%20in%20Snow.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <p class="slide-caption">Asset Curation: Walking dogs in snowdrifts, reinforcing cold environmental cues.</p>
+                                <a href="#anim-slide-5" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 5: Doggy Snore Voice & Narration Take -->
+                            <div class="slide" id="anim-slide-5">
+                                <a href="#anim-slide-4" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <video controls preload="metadata">
+                                    <source src="videos/Doggy%20Snore.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <p class="slide-caption">Voice &amp; Audio Timing: Vocal narration capture for the poem's climax and doggy snore stanza.</p>
+                                <a href="#anim-slide-1" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">
+                        To hit the specific comedic beats of the poem, I had to engineer a "performance" from Joker, 
+                        who is highly responsive to verbal commands. I directed my mother to "yell" and point at him 
+                        silently, using only physical gestures. This "Silent Command" strategy bypassed Joker’s training, 
+                        allowing me to capture his natural, inquisitive expression as he stared back with a toy in his 
+                        mouth—providing the perfect visual "What?" to match the narrative.
+                    </p>
+
+                    <p>
+                        While the footage of my family provided the emotional heart of the piece, the rest of the 
+                        production was a study in Strategic Asset Curation. Finding online clips that harmonized with 
+                        my personal 1080p footage was an arduous process of visual matching. I evaluated hundreds of 
+                        external assets to find clips that shared a similar "narrative energy" and lighting profile, 
+                        ensuring that the transition between my living room and the digital stock felt like a single, 
+                        unified world.
+                    </p>
+
+                    <h4 style="margin-top: 1.75rem; color: var(--text-heading);">Final Cinematic Composition</h4>
+                    
+                    <!-- Responsive YouTube Embed for Assignment 2 Final Video -->
+                    <div class="video-embed-container">
+                        <iframe 
+                            src="https://www.youtube-nocookie.com/embed/U_tEPIhZGis" 
+                            title="Mother Doesn't Want a Dog - Final Production" 
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <a href="https://youtu.be/U_tEPIhZGis" target="_blank" rel="noopener noreferrer" class="video-fallback-link">
+                        <span>✦ Watch on YouTube: Mother Doesn't Want a Dog (Final Cut)</span>
+                    </a>
+                </section>
+
+                <!-- Assignment 3: Asset Fabrication & Layered Environments -->
+                <section class="space-card">
+                    <h3>Assignment 3: Asset Fabrication &amp; Layered Environments</h3>
+                    <p class="text-muted">Hand-Drawn Architecture, Modular Systems &amp; Hierarchical Animation</p>
+
+                    <p>
+                        Every environment is built on a foundation of original, hand-drawn asset architecture. 
+                        Moving away from stock libraries, I illustrated every modular component from scratch—ranging 
+                        from architectural structures like the windmill and chimney to organic characters and atmospheric 
+                        layers. This bespoke approach ensured a cohesive visual style across all layers, providing a 
+                        unique aesthetic that is both intentional and technically optimized for the animation pipeline.
+                    </p>
+
+                   <!-- CSS Slide Gallery 3: Asset Page & Modular Motion Clips -->
+                    <div class="gallery-container">
+                        <div class="slider" tabindex="0" aria-label="Asset sheet and modular animation component slides">
+                            <!-- Slide 1: Master Asset Sheet (.png) -->
+                            <div class="slide" id="a3-anim-slide-1">
+                                <a href="#a3-anim-slide-7" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <img src="images/asset%20page.png" alt="Master hand-drawn asset sheet featuring modular buildings, animals, vegetation, and atmospheric elements">
+                                <p class="slide-caption">Asset Architecture: Complete hand-drawn modular sprite and environmental library.</p>
+                                <a href="#a3-anim-slide-2" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 2: House with Chimney Smoke -->
+                            <div class="slide" id="a3-anim-slide-2">
+                                <a href="#a3-anim-slide-1" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <video controls preload="metadata">
+                                    <source src="videos/Chimney.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <p class="slide-caption">Architectural Asset: Isolated chimney smoke cycle with procedural looping.</p>
+                                <a href="#a3-anim-slide-3" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 3: Windmill Rotation -->
+                            <div class="slide" id="a3-anim-slide-3">
+                                <a href="#a3-anim-slide-2" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <video controls preload="metadata">
+                                    <source src="videos/Windmill.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <p class="slide-caption">Mechanical Motion: Keyframed rotor blade rotation anchored to a static tower asset.</p>
+                                <a href="#a3-anim-slide-4" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 4: Walking Sheep -->
+                            <div class="slide" id="a3-anim-slide-4">
+                                <a href="#a3-anim-slide-3" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <video controls preload="metadata">
+                                    <source src="videos/Sheep.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <p class="slide-caption">Character Kinematics: Multi-limb walk cycle engineered for independent ground traversal.</p>
+                                <a href="#a3-anim-slide-5" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 5: Animated Cat -->
+                            <div class="slide" id="a3-anim-slide-5">
+                                <a href="#a3-anim-slide-4" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <video controls preload="metadata">
+                                    <source src="videos/Poopy%20Cat.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <p class="slide-caption">Secondary Animation: Tail articulation and seated idle posture breakdown.</p>
+                                <a href="#a3-anim-slide-6" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 6: Stone Wall Scrolling / Parallax -->
+                            <div class="slide" id="a3-anim-slide-6">
+                                <a href="#a3-anim-slide-5" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <video controls preload="metadata">
+                                    <source src="videos/Wall.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <p class="slide-caption">Environment Layering: Seamless stone wall modular asset used for foreground parallax motion.</p>
+                                <a href="#a3-anim-slide-7" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 7: Clouds Drift -->
+                            <div class="slide" id="a3-anim-slide-7">
+                                <a href="#a3-anim-slide-6" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <video controls preload="metadata">
+                                    <source src="videos/Clouds%201.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                                <p class="slide-caption">Atmospheric Layer: Multi-depth cloud drift passes calibrated to simulate spatial depth.</p>
+                                <a href="#a3-anim-slide-1" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Responsive YouTube Embed for Assignment 3 Final Video -->
+                    <div class="video-embed-container">
+                        <iframe 
+                            src="https://www.youtube-nocookie.com/embed/7N3-INO9cTc" 
+                            title="Asset Fabrication &amp; Layered Environments - Final Animation" 
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <a href="https://youtu.be/7N3-INO9cTc" target="_blank" rel="noopener noreferrer" class="video-fallback-link">
+                        <span>✦ Watch on YouTube: Asset Fabrication &amp; Layered Environments</span>
+                    </a>
+
+                    <!-- Technical Reflection Paragraphs -->
+                    <p style="margin-top: 1.75rem;">
+                        The challenge of this production was two-fold: first, illustrating a complete library of 
+                        bespoke environmental and character assets by hand, and second, engineering a tiered animation 
+                        system where those assets functioned both as independent moving parts and as cohesive elements 
+                        of a 40-second narrative.
+                    </p>
+
+                    <p>
+                        Beyond the primary camera movements, I isolated specific components—such as character limbs 
+                        and atmospheric effects—to create secondary animations within the main timeline. This process 
+                        required a deep understanding of parent-child relationships and rhythmic timing to ensure 
+                        that these "micro-motions" stayed synchronized with the "macro-motion" of the overall scene.
+                    </p>
+                </section>
+            </main>
+
+            <footer>
+                <p class="text-muted">Built by Mel Whaley</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
