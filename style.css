@@ -44,23 +44,22 @@ html, body {
 }
 
 /* ==========================================================================
-   Obsidian Nebula Animated Background
+   Obsidian Nebula Animated Background (Full Page Persistent)
    ========================================================================== */
 .nebula-container {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
   background-color: var(--nebula-void);
 }
 
-/* Swirling color mesh */
+/* Swirling color mesh - fixed to viewport so it never cuts off on scroll */
 .nebula-mesh {
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: -50%;
-  left: -50%;
+  position: fixed;
+  width: 200vw;
+  height: 200vh;
+  top: -50vh;
+  left: -50vw;
   filter: blur(var(--nebula-blur));
   background: 
     radial-gradient(circle at 25% 25%, var(--nebula-tint) 0%, transparent 45%),
@@ -71,6 +70,7 @@ html, body {
   background-size: 100% 100%;
   animation: rotateNebula var(--nebula-speed) linear infinite;
   pointer-events: none;
+  z-index: 0;
 }
 
 @keyframes rotateNebula {
@@ -85,10 +85,10 @@ html, body {
   }
 }
 
-/* Multi-layered CSS Starfield */
+/* Multi-layered CSS Starfield - fixed to viewport so stars persist through the entire page */
 .stars-layer-1,
 .stars-layer-2 {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   border-radius: 50%;
@@ -105,7 +105,8 @@ html, body {
     5vw 12vh white, 14vw 48vh white, 22vw 85vh white, 31vw 24vh white,
     42vw 63vh white, 53vw 15vh white, 64vw 78vh white, 75vw 35vh white,
     83vw 90vh white, 92vw 18vh white, 18vw 92vh white, 37vw 5vh white,
-    60vw 52vh white, 88vw 60vh white, 48vw 38vh white, 70vw 95vh white;
+    60vw 52vh white, 88vw 60vh white, 48vw 38vh white, 70vw 95vh white,
+    12vw 34vh white, 28vw 65vh white, 72vw 10vh white, 82vw 45vh white;
   animation: starTwinkle 3s ease-in-out infinite;
 }
 
@@ -116,7 +117,8 @@ html, body {
   box-shadow: 
     9vw 30vh 0 0 white, 27vw 70vh 0 0 white, 45vw 20vh 0 0 white,
     67vw 82vh 0 0 white, 85vw 28vh 0 0 white, 15vw 75vh 0 0 white,
-    55vw 60vh 0 0 white, 78vw 12vh 0 0 white, 95vw 88vh 0 0 white;
+    55vw 60vh 0 0 white, 78vw 12vh 0 0 white, 95vw 88vh 0 0 white,
+    33vw 15vh 0 0 white, 62vw 42vh 0 0 white;
   animation: starTwinkle 4.5s ease-in-out infinite reverse;
 }
 
@@ -137,7 +139,11 @@ html, body {
   z-index: 2;
   max-width: 900px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 1.25rem 1.5rem 3rem;
+}
+
+header {
+  margin-bottom: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -175,25 +181,29 @@ p {
 }
 
 /* ==========================================================================
-   Navigation Bar
+   Navigation Bar (Top-pinned & Sticky)
    ========================================================================== */
 nav {
-  margin: 1.5rem 0 2.5rem;
+  margin: 0 0 2rem 0;
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
 }
 
 nav ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1.5rem;
   margin: 0;
   gap: 1.75rem;
-  background: rgba(18, 24, 58, 0.55);
+  background: rgba(18, 24, 58, 0.85);
   border: 1px solid var(--secondary-border);
   border-radius: 9999px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   width: fit-content;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 nav a {
@@ -252,7 +262,7 @@ a:hover {
 }
 
 /* ==========================================================================
-   CSS-Only Horizontal Slide Gallery (Scroll Snap)
+   CSS-Only Horizontal Slide Gallery (Scroll Snap with Side Star Controls)
    ========================================================================== */
 .gallery-container {
   position: relative;
@@ -272,26 +282,18 @@ a:hover {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) rgba(1, 2, 8, 0.8);
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
   -webkit-overflow-scrolling: touch;
 }
 
 .slider::-webkit-scrollbar {
-  height: 8px;
-}
-
-.slider::-webkit-scrollbar-track {
-  background: rgba(1, 2, 8, 0.8);
-}
-
-.slider::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-  border-radius: 4px;
+  display: none;                /* Chrome/Safari */
 }
 
 /* Constrains each slide to exactly one viewport frame */
 .slide {
+  position: relative;
   flex: 0 0 100%;
   width: 100%;
   scroll-snap-align: start;
@@ -300,7 +302,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem;
+  padding: 1.25rem 3.5rem;      /* Extra left/right padding leaves breathing room for star buttons */
   box-sizing: border-box;
 }
 
@@ -322,40 +324,61 @@ a:hover {
   line-height: 1.4;
 }
 
-/* Numbered Navigation Pills */
-.slider-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.85rem;
-  background: rgba(18, 24, 58, 0.6);
-  border-top: 1px solid var(--secondary-border);
-}
-
-.slider-nav a {
+/* Side Navigation: Cosmic Star Buttons */
+.slider-arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 50%;
-  background: rgba(18, 24, 58, 0.9);
+  background: rgba(18, 24, 58, 0.85);
   border: 1px solid var(--secondary-border);
-  color: var(--link-color);
-  font-size: 0.9rem;
-  font-weight: 600;
+  color: var(--text-heading);   /* Celestial Starlight Gold */
+  border-radius: 50%;
   text-decoration: none;
-  transition: all 0.2s ease;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.slider-nav a:hover,
-.slider-nav a:focus {
-  background: var(--primary-color);
-  color: #FFFFFF;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 10px rgba(123, 92, 250, 0.5);
-  transform: translateY(-2px);
+.cosmic-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  display: inline-block;
+  transition: transform 0.25s ease, text-shadow 0.25s ease;
+}
+
+/* Positioning */
+.slider-arrow.prev {
+  left: 0.75rem;
+}
+
+.slider-arrow.next {
+  right: 0.75rem;
+}
+
+/* Cosmic Hover & Glow States */
+.slider-arrow.prev:hover .cosmic-icon {
+  transform: scale(1.25) rotate(-15deg);
+  text-shadow: 0 0 10px var(--text-heading), 0 0 20px var(--link-color);
+}
+
+.slider-arrow.next:hover .cosmic-icon {
+  transform: scale(1.25) rotate(15deg);
+  text-shadow: 0 0 10px var(--text-heading), 0 0 20px var(--link-color);
+}
+
+.slider-arrow:hover,
+.slider-arrow:focus {
+  background: var(--secondary-color);
+  border-color: var(--text-heading);
+  box-shadow: 0 0 16px rgba(246, 211, 101, 0.4), inset 0 0 8px rgba(123, 92, 250, 0.3);
+  transform: translateY(-50%) scale(1.08);
 }
 
 /* ==========================================================================
