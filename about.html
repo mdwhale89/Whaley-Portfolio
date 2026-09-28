@@ -3,59 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - TookStarz Designs</title>
+    <title>About Mel Whaley - TookStarz Designs</title>
     <!-- Link external stylesheet -->
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Header Brand Presentation */
-        .brand-header {
+        /* Social & Professional Link Buttons */
+        .social-links-grid {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            margin-top: 0.85rem;
+        }
+
+        .cosmic-link-button {
+            display: inline-flex;
             align-items: center;
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        /* TookStarz Banner Logo */
-        .brand-banner {
-            width: 100%;
-            max-width: 480px;
-            height: auto;
-            border-radius: 14px;
+            gap: 0.5rem;
+            padding: 0.6rem 1.25rem;
+            background: rgba(18, 24, 58, 0.6);
             border: 1px solid var(--secondary-border);
-            box-shadow: 0 0 24px rgba(123, 92, 250, 0.35), 0 8px 32px rgba(0, 0, 0, 0.6);
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .brand-banner:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 32px rgba(0, 240, 255, 0.45), 0 12px 40px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Enlarged, High-Impact Cosmic Tagline Badge */
-        .identity-badge {
-            display: inline-block;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: var(--link-color);
-            background: rgba(0, 240, 255, 0.09);
-            border: 1.5px solid rgba(0, 240, 255, 0.45);
-            padding: 0.6rem 1.75rem;
             border-radius: 9999px;
-            margin-bottom: 1.25rem;
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.25), inset 0 0 12px rgba(0, 240, 255, 0.1);
-            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+            color: var(--link-color);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
         }
 
-        @media (max-width: 600px) {
-            .identity-badge {
-                font-size: 0.95rem;
-                letter-spacing: 0.18em;
-                padding: 0.5rem 1.25rem;
-            }
+        .cosmic-link-button:hover {
+            background: rgba(0, 240, 255, 0.15);
+            border-color: var(--link-color);
+            transform: translateY(-2px);
+            box-shadow: 0 0 18px rgba(0, 240, 255, 0.45);
+            color: #ffffff;
+        }
+
+        .cosmic-link-button span.icon {
+            color: var(--text-heading);
+            font-size: 1rem;
+        }
+
+        /* Brand Banner Styling */
+        .about-banner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1.5rem 0 2rem 0;
+        }
+
+        .about-banner-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid var(--secondary-border);
+            box-shadow: 0 0 24px rgba(123, 92, 250, 0.3);
+        }
+
+        .identity-badge-container {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0 2rem 0;
         }
     </style>
 </head>
@@ -68,81 +76,100 @@
 
         <!-- Foreground content -->
         <div class="content-wrapper">
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="animation.html">Animation</a></li>
-                <li><a href="digital-to-film.html">Digital to Film</a></li>
-                <li><a href="fine-art.html">Fine Arts</a></li>
-                <li><a href="photography.html">Photography</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <!-- Standardized Alphabetical Navigation -->
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="animation.html">Animation</a></li>
+                    <li><a href="digital-to-film.html">Digital to Film</a></li>
+                    <li><a href="fine-art.html">Fine Arts</a></li>
+                    <li><a href="photography.html">Photography</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-
-            <header class="brand-header">
-                <!-- TookStarz Brand Visual (.png) -->
-                <img src="images/1.png" alt="TookStarz Cosmic Brand Logo with Rocket Launch" class="brand-banner">
-
-                <!-- Prominent Brand Identity Tagline -->
-                <div class="identity-badge">CREATOR | DESIGNER | STREAMER</div>
-                
-                <h1>About the Designer</h1>
-                <p>Digital architect, visual storyteller, and physical fabrication specialist.</p>
+            <header>
+                <h1>About the Creator</h1>
+                <p>Digital craftsmanship, analog foundations, and technical execution.</p>
             </header>
 
             <main>
-                <!-- Professional Pipeline Card -->
-                <section class="space-card">
-                    <h2>Design to Production</h2>
-                    <p class="text-muted">Bridging Digital Systems &amp; Physical Assets</p>
-                    
-                    <p>
-                        I provide a comprehensive design-to-production pipeline, specializing in 
-                        Digital-to-Film Graphic Design and High-Fidelity 3D Animation. By combining a deep 
-                        technical understanding of 3D modeling with a focus on brand identity, I translate 
-                        complex digital concepts into cohesive visual systems—extending from the screen into 
-                        the physical world through Precision 3D Printing and prototyping.
-                    </p>
+                <!-- Brand Identity Showcase -->
+                <div class="about-banner-container">
+                    <img src="images/1.png" alt="TookStarz Designs official logo and banner">
+                </div>
 
+                <div class="identity-badge-container">
+                    <span class="identity-badge">CREATOR | DESIGNER | STREAMER</span>
+                </div>
+
+                <!-- Connect & Social Portals -->
+                <section class="space-card">
+                    <h2>Orbit &amp; Networks</h2>
+                    <p class="text-muted">Professional Portals &amp; Live Broadcast Channels</p>
+
+                    <!-- Professional Networks -->
+                    <h3 style="color: var(--text-heading); margin-top: 1.25rem;">Professional Platforms</h3>
+                    <div class="social-links-grid">
+                        <a href="https://www.linkedin.com/in/mel-whaley-31b588372/" target="_blank" rel="noopener noreferrer" class="cosmic-link-button">
+                            <span class="icon">✦</span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/mdwhale89" target="_blank" rel="noopener noreferrer" class="cosmic-link-button">
+                            <span class="icon">✦</span>
+                            <span>GitHub (@mdwhale89)</span>
+                        </a>
+                    </div>
+
+                    <!-- Creator & Streaming Tier -->
+                    <h3 style="color: var(--text-heading); margin-top: 1.75rem;">Broadcast &amp; Social Channels</h3>
+                    <div class="social-links-grid">
+                        <a href="https://www.twitch.tv/tookstarz" target="_blank" rel="noopener noreferrer" class="cosmic-link-button">
+                            <span class="icon">✦</span>
+                            <span>Twitch (@TookStarz)</span>
+                        </a>
+                        <a href="https://www.youtube.com/@TookStarz" target="_blank" rel="noopener noreferrer" class="cosmic-link-button">
+                            <span class="icon">✦</span>
+                            <span>YouTube (@TookStarz)</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@tookstarz" target="_blank" rel="noopener noreferrer" class="cosmic-link-button">
+                            <span class="icon">✦</span>
+                            <span>TikTok (@tookstarz)</span>
+                        </a>
+                        <a href="https://www.instagram.com/tookstarz/" target="_blank" rel="noopener noreferrer" class="cosmic-link-button">
+                            <span class="icon">✦</span>
+                            <span>Instagram (@tookstarz)</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Core Creative Philosophy -->
+                <section class="space-card">
+                    <h2>The Multi-Disciplinary Pipeline</h2>
+                    <p class="text-muted">From Sketchbook to Screen and Fabric</p>
                     <p>
-                        Whether calibrating multi-channel white ink underbases for commercial textile transfers 
-                        or optimizing polygon topology and CAD tolerances for physical fabrication, my workflow 
-                        is built around execution without compromise between creative vision and manufacturing reality.
+                        I am a multimedia designer, digital animator, and fabricator specializing in end-to-end 
+                        creative production. My approach combines traditional fine art discipline with modern 
+                        digital toolsets, ensuring that every asset—whether a vector illustration, a 2D animation cycle, 
+                        or a physical Direct-to-Film transfer—is backed by an understanding of light, form, and composition.
+                    </p>
+                    <p>
+                        Under the moniker <strong>TookStarz</strong>, I bring that same creative passion to live streaming 
+                        and community content creation. This real-time interaction keeps my instincts sharp for rhythm, 
+                        pacing, and audience engagement, informing both my digital branding projects and personal studio works.
                     </p>
                 </section>
 
-                <!-- Creative Identity & Personal Background -->
+                <!-- Beyond the Screen -->
                 <section class="space-card">
-                    <h3>Beyond the Screen</h3>
-                    <p class="text-muted">Narrative Lore, Worldbuilding &amp; Hardware</p>
-                    
+                    <h2>Beyond the Screen</h2>
+                    <p class="text-muted">Worldbuilding, Technical Rigs &amp; Analog Passions</p>
                     <p>
-                        My visual identity is fueled by a lifelong connection to immersive storytelling and digital community. 
-                        When I'm not dialing in vector paths or running render passes in Blender, you can usually 
-                        find me behind the Dungeon Master screen building custom campaigns, dissecting comic book art 
-                        and dynamic character illustration, streaming content, or fine-tuning custom desktop PC builds.
+                        When I'm not animating frames or managing print runs, my world revolves around creative storytelling 
+                        and technical builds. I run table-top tabletop campaigns, design custom PC rigs, and explore 
+                        tactile craftsmanship through physical sketching and traditional printmaking.
                     </p>
-
-                    <p>
-                        That same dedication to detailed lore, mechanical balance, and community culture informs 
-                        every design system I build. I treat branding not just as surface aesthetics, but as an 
-                        interactive experience that audiences want to connect with.
-                    </p>
-
-                    <h4 style="margin-top: 1.75rem; color: var(--text-heading);">At a Glance</h4>
-                    <ul class="project-details-list">
-                        <li>
-                            <strong>Core Software:</strong> Adobe Illustrator, Photoshop, InDesign, Blender, Tinkercad, and Framer.
-                        </li>
-                        <li>
-                            <strong>Technical Production:</strong> Direct-to-Film (DTF) apparel printing, Dye-Sublimation performance wear, and FDM/Resin 3D printing.
-                        </li>
-                        <li>
-                            <strong>Creative Focus:</strong> Tabletop narrative design, brand merchandise architecture, hardware enthusiast setups, and live streaming across the TookStarz channels.
-                        </li>
-                    </ul>
                 </section>
             </main>
 
