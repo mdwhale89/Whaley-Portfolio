@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography - TookStarz Designs</title>
+    <!-- Link external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .photo-slide-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            width: 100%;
+        }
+
+        .slide-title-tag {
+            color: var(--text-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+
+        .slide img {
+            max-height: 480px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <!-- Nebula background layers -->
+    <div class="nebula-container">
+        <div class="nebula-mesh"></div>
+        <div class="stars-layer-1"></div>
+        <div class="stars-layer-2"></div>
+
+        <!-- Foreground content -->
+        <div class="content-wrapper">
+            <!-- Standardized Alphabetical Navigation -->
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="animation.html">Animation</a></li>
+                    <li><a href="digital-to-film.html">Digital to Film</a></li>
+                    <li><a href="fine-art.html">Fine Arts</a></li>
+                    <li><a href="photography.html">Photography</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <header>
+                <h1>The Lens: Photography &amp; Lighting Foundations</h1>
+                <p>Environmental self-portraiture, candid street documentary, and controlled light design.</p>
+            </header>
+
+            <main>
+                <!-- Overview Statement -->
+                <section class="space-card">
+                    <h2>Perspective, Light &amp; Space</h2>
+                    <p class="text-muted">Observing the Physical World</p>
+                    <p>
+                        Every digital asset begins with an understanding of space, light, and perspective. 
+                        This gallery serves as a visual archive of my photographic foundations—capturing 
+                        how real-world lighting profiles, shadow placement, and composition inform high-resolution 
+                        digital systems.
+                    </p>
+                </section>
+
+                <!-- Assignment 1: Narrative Identity -->
+                <section class="space-card">
+                    <h3>Narrative Identity: A Study of Self, Light, and Object</h3>
+                    <p class="text-muted">Environmental Self-Portraiture, Tenebrism &amp; Specular Highlights</p>
+
+                    <p>
+                        This curated series is a technical and narrative study in environmental self-portraiture. 
+                        Moving away from standard headshots, I utilized a mix of controlled studio lighting and 
+                        natural light, alongside deeply personal objects, to build a comprehensive visual identity. 
+                        Each piece is an exploration of perspective—analyzing how shadow placement, color temperature, 
+                        and specific artifacts can communicate aspects of my personality, interests, and professional 
+                        'vibe dealer' aesthetic.
+                    </p>
+
+                    <!-- Photography Slide Gallery 1 -->
+                    <div class="gallery-container">
+                        <div class="slider" tabindex="0" aria-label="Narrative Identity Photography Series">
+                            <!-- Slide 1: The Workspace Focus -->
+                            <div class="slide" id="photo-slide-1">
+                                <a href="#photo-slide-5" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%20%231.jpg" alt="Creative workspace with dual ambient lighting, mechanical keyboard, and focused posture">
+                                    <div class="slide-title-tag">The Workspace Focus</div>
+                                </div>
+                                <p class="slide-caption">
+                                    This study utilizes multi-source ambient lighting and selective depth of field to capture absolute focus within a creative workspace. The contrast between the warm desk illumination and the cool, localized backlighting from the keyboard and hardware peripherals creates a layered, high-energy atmosphere. It frames the physical act of creation directly against the technical infrastructure used to build it.
+                                </p>
+                                <a href="#photo-slide-2" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 2: The N7 Silhouette -->
+                            <div class="slide" id="photo-slide-2">
+                                <a href="#photo-slide-1" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%20%232.jpg" alt="Profile silhouette rim-lit by neon ambient signs, holding an N7 helmet">
+                                    <div class="slide-title-tag">The N7 Silhouette</div>
+                                </div>
+                                <p class="slide-caption">
+                                    A study in high-contrast rim lighting and profile geometry. The intense backlighting from the glowing ambient signage completely isolates the profile silhouette, shifting the structural focus to the iconic helmet. This composition explores how a specific cultural artifact can be integrated into a personal visual narrative through selective shadow placement and deep, atmospheric tones.
+                                </p>
+                                <a href="#photo-slide-3" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 3: The Dice Master -->
+                            <div class="slide" id="photo-slide-3">
+                                <a href="#photo-slide-2" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%20%233%20.jpg" alt="Low-key portrait with dramatic single-source lighting holding amber polyhedral dice">
+                                    <div class="slide-title-tag">The Dice Master</div>
+                                </div>
+                                <p class="slide-caption">
+                                    This image utilizes low-key, single-source lighting to generate deliberate dramatic tension. By pulling the surrounding environment into absolute shadow, the focus is directed entirely onto the face and hands. The sharp highlight falling across the amber polyhedral transforms them into the primary visual anchors of the frame, capturing the calculating perspective of a storyteller mid-session.
+                                </p>
+                                <a href="#photo-slide-4" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 4: The Visual Archive -->
+                            <div class="slide" id="photo-slide-4">
+                                <a href="#photo-slide-3" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%20%234.jpg" alt="Tenebrist composition with upward light catching the pages and binding of an open leather-bound book">
+                                    <div class="slide-title-tag">The Visual Archive</div>
+                                </div>
+                                <p class="slide-caption">
+                                    A technical study in tenebrism and textural mapping. By casting a sharp, upward-angled light directly onto the open book, the composition emphasizes the physical grain and organic texture of the leather binding. The deep shadows define the features of the face while obscuring the surrounding space, focusing the entire narrative weight on the timeless act of absorbing information.
+                                </p>
+                                <a href="#photo-slide-5" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 5: The Natural Frame -->
+                            <div class="slide" id="photo-slide-5">
+                                <a href="#photo-slide-4" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%20%235.jpg" alt="Outdoor portrait framed naturally by desert tree limbs with high-contrast sunlit path">
+                                    <div class="slide-title-tag">The Natural Frame</div>
+                                </div>
+                                <p class="slide-caption">
+                                    Stepping away from controlled studio lighting, this composition is a study in natural contrast and structural framing. The organic, twisting lines of the desert tree limbs are used as a dynamic framing device, mirroring the contours of the path. The interplay of direct sunlight and complex ground shadows creates a natural chiaroscuro, anchoring the subject firmly within a stark, high-contrast landscape.
+                                </p>
+                                <a href="#photo-slide-1" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Assignment 2: Urban Vignettes -->
+                <section class="space-card">
+                    <h3>Urban Vignettes: A Study in Candid Street Photography</h3>
+                    <p class="text-muted">Documentary Realism, Monochrome Geometry &amp; Architectural Framing</p>
+
+                    <p>
+                        This series shifts the camera's lens outward into the community, capturing unposed, 
+                        candid moments of daily life. By utilizing an authentic, documentarian approach, the 
+                        subjects remain entirely unaware of the camera, preserving the natural honesty of their 
+                        movements and interactions. Shot exclusively in high-contrast black and white, these images 
+                        strip away the vibrant distractions of the local landscape to focus entirely on composition, 
+                        geometric balance, and the timeless interplay of light and shadow within the modern environment.
+                    </p>
+
+                    <!-- Photography Slide Gallery 2 -->
+                    <div class="gallery-container">
+                        <div class="slider" tabindex="0" aria-label="Urban Vignettes Street Photography Series">
+                            <!-- Slide 1: The Fishermen -->
+                            <div class="slide" id="street-slide-1">
+                                <a href="#street-slide-5" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%20%231%20Street.jpg" alt="Candid black and white shot of fishermen along a curving shoreline backed by tall palm trees">
+                                    <div class="slide-title-tag">The Fishermen</div>
+                                </div>
+                                <p class="slide-caption">
+                                    A candid exploration of leisure and focus. The strong, sweeping curve of the shoreline acts as a massive leading line, guiding the eye directly to the central figures. By framing the subjects against a dense background of towering palm trees, the composition sets up a beautiful contrast between organic vertical structures and the quiet, horizontal focus of the fishing lines.
+                                </p>
+                                <a href="#street-slide-2" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 2: The Skater -->
+                            <div class="slide" id="street-slide-2">
+                                <a href="#street-slide-1" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%20%234%20Street.jpg" alt="Skater paused on a concrete skatepark ramp with sharp diagonal shadows and eye graphic">
+                                    <div class="slide-title-tag">The Skater</div>
+                                </div>
+                                <p class="slide-caption">
+                                    A minimalist composition centered around youth culture and urban angles. The concrete ramps of the skatepark create crisp diagonal planes that cut through the frame, casting sharp geometric shadows. The skater is perfectly isolated in the center, captured mid-thought, while the prominent eye graphic on the ramp creates a surreal, meta-narrative about observation itself.
+                                </p>
+                                <a href="#street-slide-3" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 3: The Marketplace -->
+                            <div class="slide" id="street-slide-3">
+                                <a href="#street-slide-2" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%20%2312%20Brighter.jpg" alt="Monochrome parking lot scene showing figures pushing carts amid trees and parked cars">
+                                    <div class="slide-title-tag">The Marketplace</div>
+                                </div>
+                                <p class="slide-caption">
+                                    This image captures a bustling parking lot as a stage of everyday transit. The geometric lines of the parking spaces and the harsh vertical grid of the light poles frame the candid figures pushing carts. Stripped of commercial branding by the monochrome palette, the scene becomes a timeless study in communal motion and structural depth.
+                                </p>
+                                <a href="#street-slide-4" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 4: The Intersection -->
+                            <div class="slide" id="street-slide-4">
+                                <a href="#street-slide-3" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%20%2316%20Brighter.jpg" alt="High-key street intersection with blown out sky, asphalt reflections, and silhouette vehicles">
+                                    <div class="slide-title-tag">The Intersection</div>
+                                </div>
+                                <p class="slide-caption">
+                                    An exploration of intense overexposure and atmospheric glare. By shooting directly into a harsh light source, the sky is blown out into a brilliant high-key white, turning the asphalt into a massive reflective surface. The cars and gas station architecture become stark, graphic silhouettes slicing through a field of pure light.
+                                </p>
+                                <a href="#street-slide-5" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 5: The Transit Stop -->
+                            <div class="slide" id="street-slide-5">
+                                <a href="#street-slide-4" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%20%2318%20Brighter.jpg" alt="Gas station parking lot with stationary pickup truck and blurred white van in transit under heavy awning line">
+                                    <div class="slide-title-tag">The Transit Stop</div>
+                                </div>
+                                <p class="slide-caption">
+                                    A study in industrial framing and motion blur. The dominant, heavy horizontal line of the gas station awning slices across the upper third of the frame, grounding the composition. The contrast between the stationary silver pickup truck in the foreground and the blurred white van in mid-transit beautifully freezes a slice of suburban momentum against a backdrop of distant palms.
+                                </p>
+                                <a href="#street-slide-1" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Assignment 3: Arboreal Moods -->
+                <section class="space-card">
+                    <h3>Arboreal Moods: Emotional Resonance in Black and White</h3>
+                    <p class="text-muted">Environmental Psychology, Textural Mapping &amp; Natural Framing</p>
+
+                    <p>
+                        This final photographic series explores the concept of environmental psychology, using different 
+                        tree structures to evoke a spectrum of emotional frequencies—from tranquil serenity to eerie, 
+                        gothic isolation. Without the contextual cues of seasonal color, the visual narrative relies 
+                        entirely on textural mapping, complex natural framing, and tonal distribution. Each composition 
+                        treats the organic anatomy of the branches and roots as an expression of form, transforming the 
+                        natural landscape into a deeply atmospheric study of mood and shadow.
+                    </p>
+
+                    <!-- Photography Slide Gallery 3 -->
+                    <div class="gallery-container">
+                        <div class="slider" tabindex="0" aria-label="Arboreal Moods Photography Series">
+                            <!-- Slide 1: The Gateway -->
+                            <div class="slide" id="arboreal-slide-1">
+                                <a href="#arboreal-slide-6" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%2068.jpg" alt="Dual tree framing of a quiet lake with bare branches forming an intricate natural gateway">
+                                    <div class="slide-title-tag">The Gateway</div>
+                                </div>
+                                <p class="slide-caption">
+                                    This composition uses a dual-tree framing technique to create a distinct sense of boundary and transition. The deep, heavy shadow of the trunk on the right establishes a solid structural weight, while the intricate, chaotic web of bare branches on the left cuts across the sky like a fracturing glass pane. Looking through this natural gateway onto the quiet gray water beyond evokes a mood of somber, reflective isolation.
+                                </p>
+                                <a href="#arboreal-slide-2" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 2: The Trident -->
+                            <div class="slide" id="arboreal-slide-2">
+                                <a href="#arboreal-slide-1" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%2066.jpg" alt="Trident tree split into multiple vertical columns along a water shoreline">
+                                    <div class="slide-title-tag">The Trident</div>
+                                </div>
+                                <p class="slide-caption">
+                                    A study in rhythmic repetition and balance. The clean, powerful lines of the trunk splitting into vertical columns create a satisfying geometric harmony across the lower half of the frame. The water in the background provides a soft, middle-gray negative space that balances the deep, rough texture of the bark, giving the entire image a grounded, meditative, and peaceful presence.
+                                </p>
+                                <a href="#arboreal-slide-3" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 3: The Sanctuary -->
+                            <div class="slide" id="arboreal-slide-3">
+                                <a href="#arboreal-slide-2" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%2050.jpg" alt="Park bench framed beneath an arching tree canopy against a luminous background">
+                                    <div class="slide-title-tag">The Sanctuary</div>
+                                </div>
+                                <p class="slide-caption">
+                                    This image is a masterclass in atmospheric depth and deliberate focal mapping. The massive, dark arch of the overhead branch creates a heavy, protective ceiling, framing a perfectly centered park bench nestled among stone formations. The high-key, faded background washes out into a bright mist, isolating this small pocket of rest and generating a powerful, quiet feeling of solitary sanctuary.
+                                </p>
+                                <a href="#arboreal-slide-4" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 4: The Canopy -->
+                            <div class="slide" id="arboreal-slide-4">
+                                <a href="#arboreal-slide-3" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%2049.jpg" alt="Upward view into an overexposed forest canopy showing graphic branches and twigs">
+                                    <div class="slide-title-tag">The Canopy</div>
+                                </div>
+                                <p class="slide-caption">
+                                    An exploration of overexposure and organic complexity. By shooting upward through the dense foliage directly into a white sky, the composition transforms the leaves and delicate twigs into high-contrast graphic patterns. The sharp separation between the chaotic, dark branches on the right and the softer, filtered light on the left captures a fleeting, airy feeling of looking up through a wild, unmanaged forest canopy.
+                                </p>
+                                <a href="#arboreal-slide-5" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 5: The Knotted Root -->
+                            <div class="slide" id="arboreal-slide-5">
+                                <a href="#arboreal-slide-4" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%2043.jpg" alt="Low-angle view of massive twisted roots crawling along the forest floor">
+                                    <div class="slide-title-tag">The Knotted Root</div>
+                                </div>
+                                <p class="slide-caption">
+                                    A low-angle study focused entirely on raw physical texture and ancient weight. The massive, twisted trunk sprawling horizontally across the forest floor mimics a coiled, muscular form. The deep, low-key shadows hidden within the crevices of the bark, combined with the pale blanket of fallen organic matter on the ground, create an intensely tactile, slightly eerie mood of heavy, primordial age.
+                                </p>
+                                <a href="#arboreal-slide-6" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+
+                            <!-- Slide 6: The Skeletal Arc -->
+                            <div class="slide" id="arboreal-slide-6">
+                                <a href="#arboreal-slide-5" class="slider-arrow prev" aria-label="Previous Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                                <div class="photo-slide-content">
+                                    <img src="images/Photo%2031.jpg" alt="Stark silhouette of a bent, skeletal tree arc against a stark white sky">
+                                    <div class="slide-title-tag">The Skeletal Arc</div>
+                                </div>
+                                <p class="slide-caption">
+                                    A technical study in stark silhouettes and high-contrast tension. The central tree bends in a violent, angular arc across a completely blown-out, high-key white background, making the bare, twisting branches look almost skeletal. The dense, chaotic brambles crowding the lower half of the frame trap the eye, creating an undeniable atmosphere of dramatic suspense, vulnerability, and gothic isolation.
+                                </p>
+                                <a href="#arboreal-slide-1" class="slider-arrow next" aria-label="Next Slide">
+                                    <span class="cosmic-icon">✦</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <p class="text-muted">Built by Mel Whaley</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
